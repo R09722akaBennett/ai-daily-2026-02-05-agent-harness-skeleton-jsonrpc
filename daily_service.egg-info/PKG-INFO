@@ -1,0 +1,65 @@
+Metadata-Version: 2.4
+Name: daily-service
+Version: 0.1.0
+Summary: Daily FastAPI + Streamlit complete service template
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: fastapi>=0.110
+Requires-Dist: uvicorn[standard]>=0.27
+Requires-Dist: pydantic>=2.6
+Requires-Dist: pydantic-settings>=2.2
+Requires-Dist: httpx>=0.26
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: structlog>=24.1
+Requires-Dist: rich>=13.7
+Requires-Dist: streamlit>=1.31
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.23; extra == "dev"
+Requires-Dist: ruff>=0.3; extra == "dev"
+Requires-Dist: mypy>=1.8; extra == "dev"
+
+# Daily FastAPI + Streamlit Service Template
+
+This template is designed for **daily** “complete service” projects:
+- FastAPI backend with **app factory**, versioned routers, schemas, services
+- Streamlit UI (thin client) calling the API
+- Pydantic Settings config, structured logging, tests, and scripts
+
+## Quickstart
+
+### 1) Create venv + install
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e '.[dev]'
+```
+
+### 2) Configure
+
+Copy and edit:
+
+```bash
+cp .env.example .env
+```
+
+### 3) Run API
+
+```bash
+./scripts/dev_api.sh
+```
+
+Open: http://127.0.0.1:8000/docs
+
+### 4) Run Streamlit
+
+```bash
+./scripts/dev_ui.sh
+```
+
+Open: http://127.0.0.1:8501
+
+## Repo layout
+
+See `docs/ARCHITECTURE.md`.
