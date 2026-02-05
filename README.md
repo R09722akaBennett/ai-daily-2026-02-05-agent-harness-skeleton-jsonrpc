@@ -1,6 +1,9 @@
 # Agent Harness Skeleton (JSON-RPC-ish)
 
-Tiny daily AI-trend microproject (FastAPI + Streamlit) — generated on 2026-02-05.
+Small FastAPI + Streamlit service project.
+
+## Overview
+This repository contains a minimal but structured implementation focused on the core domain logic described below.
 
 ## Why
 Codex-style harnesses are the *real* product surface: streaming progress, approvals, diffs, and replayable traces. This project gives a minimal harness + trace validator you can extend.
